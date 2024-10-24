@@ -10,16 +10,16 @@ void main() {
   test('Able to get Roots Burger Bar display name from json data', () async {
     final jsonObject =
         await _loadSampleData("test/ResturantsNearBallState.json");
-    final location = parser.parse(jsonObject);
-    expect(location.displayName, "Roots Burger Bar");
+    final locationList = parser.parse(jsonObject);
+    expect(locationList[0].displayName, "Roots Burger Bar");
   });
 
   test('Able to get Roots Burger Bar formatted address from json data',
       () async {
     final jsonObject =
         await _loadSampleData("test/ResturantsNearBallState.json");
-    final location = parser.parse(jsonObject);
-    expect(location.formattedAddress,
+    final locationList = parser.parse(jsonObject);
+    expect(locationList[0].formattedAddress,
         "1700 W University Ave, Muncie, IN 47303, USA");
   });
 
@@ -27,8 +27,8 @@ void main() {
       () async {
     final jsonObject =
         await _loadSampleData("test/ResturantsNearBallState.json");
-    final location = parser.parse(jsonObject);
-    expect(location.userRatingCount, 878);
+    final locationList = parser.parse(jsonObject);
+    expect(locationList[0].userRatingCount, 878);
   });
 }
 
