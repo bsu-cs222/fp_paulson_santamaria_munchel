@@ -1,12 +1,13 @@
 class GoogleMapsParser {
   List<GoogleMapsLocation> parse(dynamic jsonData) {
     List<GoogleMapsLocation> locationList = [];
-    final numberOfLocations = jsonData['places'].length;
+    final numberOfLocations = jsonData['results'].length;
 
     for (int i = 0; i < numberOfLocations; i++) {
-      final String displayName = jsonData['places'][0]['displayName']['text'];
-      final String formattedAddress = jsonData["places"][0]["formattedAddress"];
-      final int userRatingCount = jsonData["places"][0]["userRatingCount"];
+      final String displayName = jsonData['results'][0]['name'];
+      final String formattedAddress =
+          jsonData["results"][0]["formatted_address"];
+      final int userRatingCount = jsonData["results"][0]["user_ratings_total"];
 
       final GoogleMapsLocation location = GoogleMapsLocation(
           displayName: displayName,

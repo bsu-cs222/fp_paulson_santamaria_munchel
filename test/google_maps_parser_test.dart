@@ -7,28 +7,29 @@ import 'package:test/test.dart';
 void main() {
   GoogleMapsParser parser = GoogleMapsParser();
 
-  test('Able to get Roots Burger Bar display name from json data', () async {
+  test('Able to get David Owsley Museum display name from json data', () async {
     final jsonObject =
         await _loadSampleData("test/ResturantsNearBallState.json");
     final locationList = parser.parse(jsonObject);
-    expect(locationList[0].displayName, "Roots Burger Bar");
+    expect(locationList[0].displayName,
+        "David Owsley Museum of Art at Ball State University");
   });
 
-  test('Able to get Roots Burger Bar formatted address from json data',
+  test('Able to get David Owsley Museum formatted address from json data',
       () async {
     final jsonObject =
         await _loadSampleData("test/ResturantsNearBallState.json");
     final locationList = parser.parse(jsonObject);
     expect(locationList[0].formattedAddress,
-        "1700 W University Ave, Muncie, IN 47303, USA");
+        "Ball State University, Fine Arts Building, 2021 W Riverside Ave, Muncie, IN 47306, United States");
   });
 
-  test('Able to get Roots Burger Bar user rating count from json data',
+  test('Able to get David Owsley Museum user rating count from json data',
       () async {
     final jsonObject =
         await _loadSampleData("test/ResturantsNearBallState.json");
     final locationList = parser.parse(jsonObject);
-    expect(locationList[0].userRatingCount, 878);
+    expect(locationList[0].userRatingCount, 218);
   });
 }
 
