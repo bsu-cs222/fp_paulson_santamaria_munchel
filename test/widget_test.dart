@@ -7,13 +7,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:final_project/main.dart';
+import 'package:fp_paulson_santamaria_munchel/fetchGooglePlaceReviews.dart';
+import 'package:fp_paulson_santamaria_munchel/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(MyApp(fetchGooglePlaceReviews("AIzaSyCfm87gk74SEIrb78CLrybpNqnEdMk0S-4", "ChIJFVfGJat_54gRVEWsnV75BUU") as List));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
