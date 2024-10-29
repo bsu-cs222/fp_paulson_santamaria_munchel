@@ -40,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final urlBuilder = UrlBuilder();
   final parser = GoogleMapsParser();
   final loader = GoogleMapsPlacesLoader();
+  final _textController = TextEditingController();
   Future<String>? _future;
 
   @override
@@ -108,6 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Padding(
+                      padding: const EdgeInsets.all(50.0),
+                      child: TextField(controller: _textController),
+                    ),
+                    Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: MaterialButton(
                           color: Colors.lightBlue,
@@ -123,11 +128,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _onButtonPressed() {
     setState(() {
-      _future = loader.placesApiLoader(
-          '2000 W University Ave, Muncie, IN 47306',
-          '5000',
+      _future = loader.placesApiLoader(_textController.text, '5000',
           'AIzaSyASwFIhfVDh-Q716-P3dLp9celvyYxEZGs');
-      initialAddress += '2000 W University Ave, Muncie, IN 47306';
+      initialAddress += _textController.text;
     });
   }
 

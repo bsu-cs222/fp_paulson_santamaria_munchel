@@ -1,11 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-Future<List<dynamic>> fetchGooglePlaceReviews(String apiKey, String placeId) async{
+Future<List> fetchGooglePlaceReviews(String apiKey, String placeId) async {
   final response = await http.get(
     Uri.parse(
-        'https://maaps.googleapis.com/maps/api/place/details/json?place_id=$placeId&fields=name,rating,reviews&key=$apiKey'
-    ),
+        'https://maps.googleapis.com/maps/api/place/textsearch/json?query=popular%20locations%20around%202000%20W%20University%20Ave,%20Muncie,%20IN%2047306&radius=5000&key=AIzaSyASwFIhfVDh-Q716-P3dLp9celvyYxEZGs'),
   );
 
   if (response.statusCode == 200) {
