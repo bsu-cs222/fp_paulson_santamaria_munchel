@@ -4,10 +4,10 @@ class GoogleMapsParser {
     final numberOfLocations = jsonData['results'].length;
 
     for (int i = 0; i < numberOfLocations; i++) {
-      final String displayName = jsonData['results'][0]['name'];
+      final String displayName = jsonData['results'][i]['name'];
       final String formattedAddress =
-          jsonData["results"][0]["formatted_address"];
-      final int userRatingCount = jsonData["results"][0]["user_ratings_total"];
+          jsonData["results"][i]["formatted_address"];
+      final int userRatingCount = jsonData["results"][i]["user_ratings_total"];
 
       final GoogleMapsLocation location = GoogleMapsLocation(
           displayName: displayName,
