@@ -84,9 +84,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   } else if (snapshot.connectionState == ConnectionState.done &&
                       snapshot.data == null) {
-                    return const Center(
+                    return Center(
                         child: Column(children: [
-                      Text('Data not available'),
+                      const Text('No internet connection. Please connect.'),
+                      MaterialButton(
+                        onPressed: _onBackButtonPressed,
+                        color: Colors.deepOrange,
+                        child: const Text("Back"),
+                      ),
                     ]));
                   } else {
                     return const Center(child: CircularProgressIndicator());
