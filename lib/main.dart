@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fp_paulson_santamaria_munchel/google_maps_parser.dart';
 import 'package:fp_paulson_santamaria_munchel/google_maps_places_loader.dart';
-import 'package:fp_paulson_santamaria_munchel/url_builder.dart';
+import 'package:fp_paulson_santamaria_munchel/uri_builder.dart';
 
 import 'package:auto_size_text/auto_size_text.dart';
 
@@ -37,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String initialAddress = 'Searched Address: ';
   final _scrollController = ScrollController();
-  final urlBuilder = UrlBuilder();
+  final urlBuilder = UriBuilder();
   final parser = GoogleMapsParser();
   final loader = GoogleMapsPlacesLoader();
   final _textController = TextEditingController();
@@ -124,8 +124,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _onButtonPressed() {
     setState(() {
-      _future = loader.placesApiLoader(_textController.text, '5000',
-          'AIzaSyASwFIhfVDh-Q716-P3dLp9celvyYxEZGs');
+      _future = loader.placesApiLoader(
+          _textController.text, '5000', '$apikey'); // REPLACE WITH API KEY
       initialAddress += _textController.text;
     });
   }

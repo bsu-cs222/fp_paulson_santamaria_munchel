@@ -9,7 +9,7 @@ void main() {
 
   test('Parser parses David Owsley Museum information correctly', () async {
     final jsonObject =
-        await _loadSampleData("test/LocationsNearBallState.json");
+        await _loadSampleData("test/locations_near_ball_state.json");
     final locationList = parser.parse(jsonObject);
     expect(locationList.locationList[0].displayName,
         "David Owsley Museum of Art at Ball State University");
