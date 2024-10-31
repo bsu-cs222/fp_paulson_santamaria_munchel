@@ -1,6 +1,6 @@
 class GoogleMapsParser {
-  List<GoogleMapsLocation> parse(dynamic jsonData) {
-    List<GoogleMapsLocation> locationList = [];
+  LocationList parse(dynamic jsonData) {
+    List<GoogleMapsLocation> listOfLocations = [];
     final numberOfLocations = jsonData['results'].length;
 
     for (int i = 0; i < numberOfLocations; i++) {
@@ -14,9 +14,9 @@ class GoogleMapsParser {
           formattedAddress: formattedAddress,
           userRatingCount: userRatingCount);
 
-      locationList.add(location);
+      listOfLocations.add(location);
     }
-
+    LocationList locationList = LocationList(locationList: listOfLocations);
     return locationList;
   }
 }
@@ -30,4 +30,20 @@ class GoogleMapsLocation {
       {required this.displayName,
       required this.formattedAddress,
       required this.userRatingCount});
+}
+
+class LocationList {
+  final List<GoogleMapsLocation> locationList;
+
+  LocationList({required this.locationList});
+
+  @override
+  String toString() {
+    String listStringFormat = '';
+    for (int i = 0; i < locationList.length; i++) {
+      listStringFormat +=
+          'Name: ${locationList[i].displayName}\nFormatted Address: ${locationList[i].formattedAddress}\nNumber of Ratings: ${locationList[i].userRatingCount}\n\n';
+    }
+    return listStringFormat;
+  }
 }

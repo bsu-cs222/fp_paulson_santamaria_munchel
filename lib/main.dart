@@ -57,11 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       snapshot.data != null) {
                     final jsonObject = _loadData(snapshot.data!);
                     final locationList = parser.parse(jsonObject);
-                    String displayedData = '$initialAddress\n\n';
-                    for (int i = 0; i < locationList.length; i++) {
-                      displayedData +=
-                          'Name: ${locationList[i].displayName}\nAddress: ${locationList[i].formattedAddress}\nUser Rating Count: ${locationList[i].userRatingCount}\n\n';
-                    }
+                    String displayedData = '$initialAddress\n\n $locationList';
                     return Center(
                       child: Column(
                         children: [
@@ -137,6 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _onBackButtonPressed() async {
     setState(() {
       _future = null;
+      initialAddress = '';
     });
   }
 }
