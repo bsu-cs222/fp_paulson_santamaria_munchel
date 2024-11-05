@@ -1,13 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 import 'package:fp_paulson_santamaria_munchel/google_maps_parser.dart';
 import 'package:fp_paulson_santamaria_munchel/google_maps_places_loader.dart';
 import 'package:fp_paulson_santamaria_munchel/uri_builder.dart';
 
 import 'package:auto_size_text/auto_size_text.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
@@ -42,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final loader = GoogleMapsPlacesLoader();
   final _textController = TextEditingController();
   Future<String>? _future;
+  final apiKey = dotenv.env['PLACES_API_KEY'];
 
   @override
   Widget build(BuildContext context) {
@@ -124,8 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _onButtonPressed() {
     setState(() {
-      _future = loader.placesApiLoader(
-          _textController.text, '5000', '$apikey'); // REPLACE WITH API KEY
+      _future = loader.placesApiLoader(_textController.text, '5000', apiKey!);
       initialAddress += _textController.text;
     });
   }
@@ -133,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _onBackButtonPressed() async {
     setState(() {
       _future = null;
-      initialAddress = '';
+      initialAddress = 'Searched Address: ';
     });
   }
 }
