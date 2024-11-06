@@ -20,12 +20,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Popular Location Finder',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: const Color(0xFFefe1cb),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         useMaterial3: true,
       ),
-      home: const Scaffold(body: MyHomePage()),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Center(
+                child: Text('The Most Interesting Place(s) in the World')),
+          ),
+          body: MyHomePage()),
     );
   }
 }
@@ -77,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           MaterialButton(
                             onPressed: _onBackButtonPressed,
-                            color: Colors.deepOrange,
+                            color: Colors.redAccent,
                             child: const Text("Back"),
                           ),
                         ],
@@ -90,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       const Text('No internet connection. Please connect.'),
                       MaterialButton(
                         onPressed: _onBackButtonPressed,
-                        color: Colors.deepOrange,
+                        color: Colors.redAccent,
                         child: const Text("Back"),
                       ),
                     ]));
@@ -101,10 +107,18 @@ class _MyHomePageState extends State<MyHomePage> {
             : Center(
                 child: Column(
                   children: [
+                    SizedBox(
+                      height: 600,
+                      width: 600,
+                      child: Image.asset(
+                        'images/Map.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                     const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
-                        "Popular Location Finder",
+                        "Search Function: ",
                         style: TextStyle(fontSize: 18),
                       ),
                     ),
@@ -117,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: MaterialButton(
                           color: Colors.lightBlue,
                           onPressed: _onButtonPressed,
-                          child: const Text('Press')),
+                          child: const Text('Search')),
                     ),
                   ],
                 ),
@@ -127,10 +141,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButtonPressed() {
-    setState(() {
-      _future = loader.placesApiLoader(_textController.text, '5000', apiKey!);
-      initialAddress += _textController.text;
-    });
+    if (_textController.text.isNotEmpty) {
+      setState(() {
+        _future = loader.placesApiLoader(_textController.text, '5000', apiKey!);
+        initialAddress += _textController.text;
+      });
+    }
   }
 
   Future<void> _onBackButtonPressed() async {
