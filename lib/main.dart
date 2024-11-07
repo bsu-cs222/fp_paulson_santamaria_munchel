@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -65,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.done &&
                       snapshot.data != null) {
-                    final jsonObject = _loadData(snapshot.data!);
+                    final jsonObject = loader.loadData(snapshot.data!);
                     final locationList = parser.parse(jsonObject);
                     String displayedData = '$initialAddress\n\n $locationList';
                     return Center(
@@ -108,8 +106,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 600,
-                      width: 600,
+                      height: 300,
+                      width: 400,
                       child: Image.asset(
                         'images/Map.jpg',
                         fit: BoxFit.cover,
@@ -156,10 +154,3 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 }
-
-dynamic _loadData(String jsonData) {
-  final jsonEncodedResponse = jsonData;
-  return jsonDecode(jsonEncodedResponse);
-}
-
-//_future = loader.placesApiLoader('2000 W University Ave, Muncie, IN 47306', '5000', 'AIzaSyCfm87gk74SEIrb78CLrybpNqnEdMk0S-4');
