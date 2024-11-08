@@ -76,7 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: SingleChildScrollView(
                                   controller: _scrollController,
                                   scrollDirection: Axis.vertical,
-                                  child: AutoSizeText(displayedData)),
+                                  child: AutoSizeText(
+                                    displayedData,
+                                    textAlign: TextAlign.center,
+                                  )),
                             ),
                           ),
                           MaterialButton(
@@ -109,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 300,
                       width: 400,
                       child: Image.asset(
-                        'images/Map.jpg',
+                        'images/MapGif3.gif',
                         fit: BoxFit.cover,
                       ),
                     ),
