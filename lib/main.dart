@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-
 import 'package:fp_paulson_santamaria_munchel/google_maps_parser.dart';
 import 'package:fp_paulson_santamaria_munchel/google_maps_places_loader.dart';
 import 'package:fp_paulson_santamaria_munchel/uri_builder.dart';
-
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:address_form/address_form.dart';
 
 void main() async {
   await dotenv.load(fileName: '.env');
@@ -47,9 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
   final urlBuilder = UriBuilder();
   final parser = GoogleMapsParser();
   final loader = GoogleMapsPlacesLoader();
-  final _textController = TextEditingController();
+  final _textController1 = TextEditingController();
+  final _textController2 = TextEditingController();
+  final _textController3 = TextEditingController();
+  final _textController4 = TextEditingController();
+  final mainKey = GlobalKey<AddressFormState>();
   Future<String>? _future;
-  final apiKey = dotenv.env['PLACES_API_KEY'];
+  final apiKey = dotenv.env['PLACES_API_KEY'].toString();
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       snapshot.data != null) {
                     final jsonObject = loader.loadData(snapshot.data!);
                     final locationList = parser.parse(jsonObject);
+                    locationList.locationList.sort((a, b) =>
+                        b.userRatingCount.compareTo(a.userRatingCount));
                     String displayedData = '$initialAddress\n\n $locationList';
                     return Center(
                       child: Column(
@@ -116,16 +121,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        "Search Function: ",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
                     Padding(
-                      padding: const EdgeInsets.all(50.0),
-                      child: TextField(controller: _textController),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          AddressForm(
+                            addressController: _textController1,
+                            address2Controller: _textController2,
+                            zipController: _textController3,
+                            cityController: _textController4,
+                            mainKey: mainKey,
+                            apiKey: apiKey,
+                          )
+                        ],
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -138,14 +148,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
       ], //children),
-    )); //Scaffold
+    ));
   }
 
   void _onButtonPressed() {
-    if (_textController.text.isNotEmpty) {
+    //if (_textController.text.isNotEmpty)
+    {
       setState(() {
-        _future = loader.placesApiLoader(_textController.text, '5000', apiKey!);
-        initialAddress += _textController.text;
+        _future = loader.placesApiLoader(
+            (_textController1.text +
+                _textController2.text +
+                _textController3.text +
+                _textController4.text),
+            '5000',
+            apiKey);
+        initialAddress +=
+            ("${_textController1.text} ${_textController2.text} ${_textController3.text} ${_textController4.text}");
       });
     }
   }
