@@ -110,41 +110,51 @@ class _MyHomePageState extends State<MyHomePage> {
                     return const Center(child: CircularProgressIndicator());
                   }
                 })
-            : Center(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 300,
-                      width: 400,
-                      child: Image.asset(
-                        'images/MapGif3.gif',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+            : SizedBox(
+                height: 500,
+                child: Scrollbar(
+                  controller: _scrollController,
+                  child: SingleChildScrollView(
+                    controller: _scrollController,
+                    scrollDirection: Axis.vertical,
+                    child: Center(
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          AddressForm(
-                            addressController: _textController1,
-                            address2Controller: _textController2,
-                            zipController: _textController3,
-                            cityController: _textController4,
-                            mainKey: mainKey,
-                            apiKey: apiKey,
-                          )
+                        children: [
+                          SizedBox(
+                            height: 300,
+                            width: 400,
+                            child: Image.asset(
+                              'images/MapGif3.gif',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                AddressForm(
+                                  addressController: _textController1,
+                                  address2Controller: _textController2,
+                                  zipController: _textController3,
+                                  cityController: _textController4,
+                                  mainKey: mainKey,
+                                  apiKey: apiKey,
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: MaterialButton(
+                                color: Colors.lightBlue,
+                                onPressed: _onButtonPressed,
+                                child: const Text('Search')),
+                          ),
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: MaterialButton(
-                          color: Colors.lightBlue,
-                          onPressed: _onButtonPressed,
-                          child: const Text('Search')),
-                    ),
-                  ],
+                  ),
                 ),
               ),
       ], //children),
