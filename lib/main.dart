@@ -8,11 +8,11 @@ import 'package:address_form/address_form.dart';
 
 void main() async {
   await dotenv.load(fileName: '.env');
-  runApp(const MyApp());
+  runApp(const PopularLocationFinderApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class PopularLocationFinderApp extends StatelessWidget {
+  const PopularLocationFinderApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,31 +25,29 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
           appBar: AppBar(
-            title: Center(
-                child: Text('The Most Interesting Place(s) in the World')),
+            title: Center(child: Text('Most Popular Locations Near Me')),
           ),
-          body: MyHomePage()),
+          body: ApplicationOnStartUp()),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
+class ApplicationOnStartUp extends StatefulWidget {
+  const ApplicationOnStartUp({super.key});
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ApplicationOnStartUp> createState() => _ApplicationOnStartUpState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   String initialAddress = 'Searched Address: ';
   final _scrollController = ScrollController();
   final urlBuilder = UriBuilder();
   final parser = GoogleMapsParser();
   final loader = GoogleMapsPlacesLoader();
-  final _textController1 = TextEditingController();
-  final _textController2 = TextEditingController();
-  final _textController3 = TextEditingController();
-  final _textController4 = TextEditingController();
+  final _addressController = TextEditingController();
+  final _address2Controller = TextEditingController();
+  final _zipController = TextEditingController();
+  final _cityController = TextEditingController();
   final mainKey = GlobalKey<AddressFormState>();
   Future<String>? _future;
   final apiKey = dotenv.env['PLACES_API_KEY'].toString();
@@ -57,125 +55,144 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _future != null
-            ? FutureBuilder(
-                future: _future,
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.done &&
-                      snapshot.data != null) {
-                    final jsonObject = loader.loadData(snapshot.data!);
-                    final locationList = parser.parse(jsonObject);
-                    locationList.locationList.sort((a, b) =>
-                        b.userRatingCount.compareTo(a.userRatingCount));
-                    String displayedData = '$initialAddress\n\n $locationList';
-                    return Center(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 200,
-                            child: Scrollbar(
-                              controller: _scrollController,
-                              child: SingleChildScrollView(
-                                  controller: _scrollController,
-                                  scrollDirection: Axis.vertical,
-                                  child: AutoSizeText(
-                                    displayedData,
-                                    textAlign: TextAlign.center,
-                                  )),
-                            ),
-                          ),
-                          MaterialButton(
-                            onPressed: _onBackButtonPressed,
-                            color: Colors.redAccent,
-                            child: const Text("Back"),
-                          ),
-                        ],
-                      ),
-                    );
-                  } else if (snapshot.connectionState == ConnectionState.done &&
-                      snapshot.data == null) {
-                    return Center(
-                        child: Column(children: [
-                      const Text('No internet connection. Please connect.'),
-                      MaterialButton(
-                        onPressed: _onBackButtonPressed,
-                        color: Colors.redAccent,
-                        child: const Text("Back"),
-                      ),
-                    ]));
-                  } else {
-                    return const Center(child: CircularProgressIndicator());
-                  }
-                })
-            : SizedBox(
-                height: 500,
-                child: Scrollbar(
-                  controller: _scrollController,
-                  child: SingleChildScrollView(
-                    controller: _scrollController,
-                    scrollDirection: Axis.vertical,
-                    child: Center(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 300,
-                            width: 400,
-                            child: Image.asset(
-                              'images/MapGif3.gif',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                AddressForm(
-                                  addressController: _textController1,
-                                  address2Controller: _textController2,
-                                  zipController: _textController3,
-                                  cityController: _textController4,
-                                  mainKey: mainKey,
-                                  apiKey: apiKey,
-                                )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: MaterialButton(
-                                color: Colors.lightBlue,
-                                onPressed: _onButtonPressed,
-                                child: const Text('Search')),
-                          ),
-                        ],
-                      ),
-                    ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _future != null ? _buildFutureBuilder() : _buildSearchScreen(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFutureBuilder() {
+    return FutureBuilder(
+      future: _future,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done &&
+            snapshot.data != null) {
+          return _buildResultsScreen(snapshot.data!);
+        } else if (snapshot.connectionState == ConnectionState.done &&
+            snapshot.data == null) {
+          return _buildNoConnectionScreen();
+        } else {
+          return const Center(child: CircularProgressIndicator());
+        }
+      },
+    );
+  }
+
+  Widget _buildNoConnectionScreen() {
+    return Center(
+      child: Column(
+        children: [
+          const Text(
+              "Error, application requires an internet connection to work. Please fix your connection and try again"),
+          MaterialButton(
+            onPressed: _onBackButtonPressed,
+            color: Colors.redAccent,
+            child: const Text("Back"),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSearchScreen() {
+    return SizedBox(
+      height: 500,
+      child: Scrollbar(
+        controller: _scrollController,
+        child: SingleChildScrollView(
+          controller: _scrollController,
+          scrollDirection: Axis.vertical,
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 300,
+                  width: 400,
+                  child: Image.asset(
+                    'images/MapGif3.gif',
+                    fit: BoxFit.cover,
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      AddressForm(
+                        addressController: _addressController,
+                        address2Controller: _address2Controller,
+                        zipController: _zipController,
+                        cityController: _cityController,
+                        mainKey: mainKey,
+                        apiKey: apiKey,
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MaterialButton(
+                    color: Colors.lightBlue,
+                    onPressed: _onButtonPressed,
+                    child: const Text('Search'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildResultsScreen(String data) {
+    final jsonObject = loader.loadData(data);
+    final locationList = parser.parse(jsonObject);
+    locationList.locationList
+        .sort((a, b) => b.userRatingCount.compareTo(a.userRatingCount));
+    final displayedData = '$initialAddress\n\n $locationList';
+    return Center(
+      child: Column(
+        children: [
+          SizedBox(
+            height: 200,
+            child: Scrollbar(
+              controller: _scrollController,
+              child: SingleChildScrollView(
+                controller: _scrollController,
+                scrollDirection: Axis.vertical,
+                child: AutoSizeText(
+                  displayedData,
+                  textAlign: TextAlign.center,
+                ),
               ),
-      ], //children),
-    ));
+            ),
+          ),
+          MaterialButton(
+            onPressed: _onBackButtonPressed,
+            color: Colors.redAccent,
+            child: const Text("Back"),
+          ),
+        ],
+      ),
+    );
   }
 
   void _onButtonPressed() {
-    //if (_textController.text.isNotEmpty)
-    {
-      setState(() {
-        _future = loader.placesApiLoader(
-            (_textController1.text +
-                _textController2.text +
-                _textController3.text +
-                _textController4.text),
-            '5000',
-            apiKey);
-        initialAddress +=
-            ("${_textController1.text} ${_textController2.text} ${_textController3.text} ${_textController4.text}");
-      });
-    }
+    setState(() {
+      _future = loader.placesApiLoader(
+        (_addressController.text +
+            _address2Controller.text +
+            _zipController.text +
+            _cityController.text),
+        '5000',
+        apiKey,
+      );
+      initialAddress += (_addressController.text.toString());
+    });
   }
 
   Future<void> _onBackButtonPressed() async {
