@@ -27,18 +27,18 @@ class PopularLocationFinderApp extends StatelessWidget {
           appBar: AppBar(
             title: Center(child: Text('Most Popular Locations Near Me')),
           ),
-          body: ApplicationOnStartUp()),
+          body: AppStartup()),
     );
   }
 }
 
-class ApplicationOnStartUp extends StatefulWidget {
-  const ApplicationOnStartUp({super.key});
+class AppStartup extends StatefulWidget {
+  const AppStartup({super.key});
   @override
-  State<ApplicationOnStartUp> createState() => _ApplicationOnStartUpState();
+  State<AppStartup> createState() => _AppStartupState();
 }
 
-class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
+class _AppStartupState extends State<AppStartup> {
   String initialAddress = 'Searched Address: ';
   final _scrollController = ScrollController();
   final urlBuilder = UriBuilder();
@@ -81,7 +81,7 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     );
   }
 
-  Widget _buildNoConnectionScreen() {
+  Widget _buildNoConnectionScreen() { //Only shows when user isn't connected to internet
     return Center(
       child: Column(
         children: [
@@ -97,7 +97,7 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     );
   }
 
-  Widget _buildSearchScreen() {
+  Widget _buildSearchScreen() { //Address Form Search
     return SizedBox(
       height: 500,
       child: Scrollbar(
@@ -148,7 +148,7 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     );
   }
 
-  Widget _buildResultsScreen(String data) {
+  Widget _buildResultsScreen(String data) { //Location Results Page
     final jsonObject = loader.loadData(data);
     final locationList = parser.parse(jsonObject);
     locationList.locationList
@@ -182,17 +182,19 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   }
 
   void _onButtonPressed() {
-    setState(() {
-      _future = loader.placesApiLoader(
-        (_addressController.text +
-            _address2Controller.text +
-            _zipController.text +
-            _cityController.text),
-        '5000',
-        apiKey,
-      );
-      initialAddress += (_addressController.text.toString());
-    });
+    if (_addressController.text.isNotEmpty) {
+      setState(() {
+        _future = loader.placesApiLoader(
+          (_addressController.text +
+              _address2Controller.text +
+              _zipController.text +
+              _cityController.text),
+          '5000',
+          apiKey,
+        );
+        initialAddress += (_addressController.text.toString());
+      });
+    }
   }
 
   Future<void> _onBackButtonPressed() async {
