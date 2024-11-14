@@ -6,6 +6,8 @@ import 'package:fp_paulson_santamaria_munchel/uri_builder.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:address_form/address_form.dart';
 
+import 'package:google_places_api_flutter/google_places_api_flutter.dart';
+
 void main() async {
   await dotenv.load(fileName: '.env');
   runApp(const PopularLocationFinderApp());
@@ -27,27 +29,24 @@ class PopularLocationFinderApp extends StatelessWidget {
           appBar: AppBar(
             title: Center(child: Text('Most Popular Locations Near Me')),
           ),
-          body: AppStartup()),
+          body: ApplicationOnStartUp()),
     );
   }
 }
 
-class AppStartup extends StatefulWidget {
-  const AppStartup({super.key});
+class ApplicationOnStartUp extends StatefulWidget {
+  const ApplicationOnStartUp({super.key});
   @override
-  State<AppStartup> createState() => _AppStartupState();
+  State<ApplicationOnStartUp> createState() => _ApplicationOnStartUpState();
 }
 
-class _AppStartupState extends State<AppStartup> {
+class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   String initialAddress = 'Searched Address: ';
   final _scrollController = ScrollController();
   final urlBuilder = UriBuilder();
   final parser = GoogleMapsParser();
   final loader = GoogleMapsPlacesLoader();
   final _addressController = TextEditingController();
-  final _address2Controller = TextEditingController();
-  final _zipController = TextEditingController();
-  final _cityController = TextEditingController();
   final mainKey = GlobalKey<AddressFormState>();
   Future<String>? _future;
   final apiKey = dotenv.env['PLACES_API_KEY'].toString();
@@ -81,7 +80,7 @@ class _AppStartupState extends State<AppStartup> {
     );
   }
 
-  Widget _buildNoConnectionScreen() { //Only shows when user isn't connected to internet
+  Widget _buildNoConnectionScreen() {
     return Center(
       child: Column(
         children: [
@@ -97,7 +96,7 @@ class _AppStartupState extends State<AppStartup> {
     );
   }
 
-  Widget _buildSearchScreen() { //Address Form Search
+  Widget _buildSearchScreen() {
     return SizedBox(
       height: 500,
       child: Scrollbar(
@@ -121,13 +120,29 @@ class _AppStartupState extends State<AppStartup> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      AddressForm(
-                        addressController: _addressController,
-                        address2Controller: _address2Controller,
-                        zipController: _zipController,
-                        cityController: _cityController,
-                        mainKey: mainKey,
+                      PlaceSearchField(
+                        controller: _addressController,
                         apiKey: apiKey,
+                        onPlaceSelected: (placeId, latLng) async {
+                          _addressController.text = placeId.description;
+                        },
+                        decorationBuilder: (context, child) {
+                          return Material(
+                            type: MaterialType.card,
+                            elevation: 4,
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8),
+                            child: child,
+                          );
+                        },
+                        itemBuilder: (context, prediction) => ListTile(
+                          leading: const Icon(Icons.location_on),
+                          title: Text(
+                            prediction.description,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -148,7 +163,7 @@ class _AppStartupState extends State<AppStartup> {
     );
   }
 
-  Widget _buildResultsScreen(String data) { //Location Results Page
+  Widget _buildResultsScreen(String data) {
     final jsonObject = loader.loadData(data);
     final locationList = parser.parse(jsonObject);
     locationList.locationList
@@ -185,10 +200,7 @@ class _AppStartupState extends State<AppStartup> {
     if (_addressController.text.isNotEmpty) {
       setState(() {
         _future = loader.placesApiLoader(
-          (_addressController.text +
-              _address2Controller.text +
-              _zipController.text +
-              _cityController.text),
+          _addressController.text,
           '5000',
           apiKey,
         );
@@ -201,6 +213,7 @@ class _AppStartupState extends State<AppStartup> {
     setState(() {
       _future = null;
       initialAddress = 'Searched Address: ';
+      _addressController.text = '';
     });
   }
 }

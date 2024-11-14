@@ -42,7 +42,7 @@ class LocationList {
     String listStringFormat = '';
     for (int i = 0; i < locationList.length; i++) {
       listStringFormat +=
-          'Name: ${locationList[i].displayName}\nFormatted Address: ${locationList[i].formattedAddress}\nNumber of Ratings: ${locationList[i].userRatingCount}\n\n';
+          'Location \#${i + 1}\nName: ${locationList[i].displayName}\nFormatted Address: ${locationList[i].formattedAddress}\nNumber of Ratings: ${locationList[i].userRatingCount}\n\n';
     }
     return listStringFormat;
   }

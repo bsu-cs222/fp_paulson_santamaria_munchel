@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  google_places_api_flutter: ^1.0.0
   dotenv: ^4.2.0
   google_maps_flutter: ^2.1.0
   http: any

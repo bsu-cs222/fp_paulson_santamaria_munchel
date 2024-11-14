@@ -11,6 +11,8 @@ class GoogleMapsPlacesLoader {
     final response = await http.read(Uri.parse(
         urlBuilder.convertSearchTermToUrl(
             address: address, radius: radius, apiKey: apiKey)));
+    print(urlBuilder.convertSearchTermToUrl(
+        address: address, radius: radius, apiKey: apiKey));
     return response;
   }
 
