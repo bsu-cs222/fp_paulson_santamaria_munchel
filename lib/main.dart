@@ -168,7 +168,13 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     final locationList = parser.parse(jsonObject);
     locationList.locationList
         .sort((a, b) => b.userRatingCount.compareTo(a.userRatingCount));
-    final displayedData = '$initialAddress\n\n $locationList';
+    String listStringFormat = '';
+    for (int i = 0; i < locationList.locationList.length; i++) {
+      listStringFormat +=
+          'Location \#${i + 1}\nName: ${locationList.locationList[i].displayName}\nFormatted Address: ${locationList.locationList[i].formattedAddress}\nNumber of Ratings: ${locationList.locationList[i].userRatingCount}\n\n';
+    }
+    final displayedData =
+        '$initialAddress\n\n $locationList\n$listStringFormat';
     return Center(
       child: Column(
         children: [
@@ -201,7 +207,7 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
       setState(() {
         _future = loader.placesApiLoader(
           _addressController.text,
-          '5000',
+          '500',
           apiKey,
         );
         initialAddress += (_addressController.text.toString());

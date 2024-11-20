@@ -8,8 +8,8 @@ void main() {
       "creates the correct URI for searching for popular State Parks within 2500 meters using our API key",
       () {
     String testURI = uriBuilder.convertSearchTermToUrl(
-        address: "State Parks", radius: "2500", apiKey: "foo");
+        address: 'State Parks', radius: '2500', apiKey: 'foo');
     expect(testURI,
-        'https://maps.googleapis.com/maps/api/place/textsearch/json?query=popular%20locations%20near%20State Parks&radius=2500&key=foo');
+        'https://maps.googleapis.com/maps/api/place/textsearch/json?query=every%20locations%20around%20State Parks&radius=2500&key=foo');
   });
 }

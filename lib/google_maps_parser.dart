@@ -36,14 +36,4 @@ class LocationList {
   final List<GoogleMapsLocation> locationList;
 
   LocationList({required this.locationList});
-
-  @override
-  String toString() {
-    String listStringFormat = '';
-    for (int i = 0; i < locationList.length; i++) {
-      listStringFormat +=
-          'Location \#${i + 1}\nName: ${locationList[i].displayName}\nFormatted Address: ${locationList[i].formattedAddress}\nNumber of Ratings: ${locationList[i].userRatingCount}\n\n';
-    }
-    return listStringFormat;
-  }
 }
