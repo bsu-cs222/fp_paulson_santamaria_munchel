@@ -263,16 +263,16 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   }
 
   void _displayResults() {
-    //if (_addressController.text.isNotEmpty && radius != null) {
-    setState(() {
-      _future = loader.loadPlacesApi(
-        '40.2024,-85.4073',
-        radiusMap[radius]!,
-        apiKey,
-      );
-      initialAddress += (_addressController.text.toString());
-    });
-    //}
+    if (_addressController.text.isNotEmpty && radius != null) {
+      setState(() {
+        _future = loader.loadPlacesApi(
+          '40.2024,-85.4073', //this needs to be changed to a new value based on coordinates of the addressController search
+          radiusMap[radius]!,
+          apiKey,
+        );
+        initialAddress += (_addressController.text.toString());
+      });
+    }
   }
 
   void _onSearchButtonPressed() {
