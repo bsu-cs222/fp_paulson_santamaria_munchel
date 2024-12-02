@@ -4,14 +4,14 @@ class GoogleMapsParser {
     final numberOfLocations = jsonData['results'].length;
 
     for (int i = 0; i < numberOfLocations; i++) {
-      final String displayName = jsonData['results'][i]['name'];
-      final String formattedAddress =
-          jsonData["results"][i]["formatted_address"];
-      final int userRatingCount = jsonData["results"][i]["user_ratings_total"];
+      final String locationName = jsonData['results'][i]['name'];
+      final String vicinity = jsonData['results'][i]['vicinity'];
+      final int userRatingCount =
+          jsonData['results'][i]['user_ratings_total'] ?? 0;
 
       final GoogleMapsLocation location = GoogleMapsLocation(
-          displayName: displayName,
-          formattedAddress: formattedAddress,
+          locationName: locationName,
+          vicinity: vicinity,
           userRatingCount: userRatingCount);
 
       listOfLocations.add(location);
@@ -22,18 +22,20 @@ class GoogleMapsParser {
 }
 
 class GoogleMapsLocation {
-  final String displayName;
-  final String formattedAddress;
+  final String locationName;
+  final String vicinity;
   final int userRatingCount;
 
   GoogleMapsLocation(
-      {required this.displayName,
-      required this.formattedAddress,
+      {required this.locationName,
+      required this.vicinity,
       required this.userRatingCount});
 }
 
 class LocationList {
   final List<GoogleMapsLocation> locationList;
 
-  LocationList({required this.locationList});
+  LocationList({
+    required this.locationList,
+  }) : assert(locationList.isNotEmpty);
 }

@@ -6,13 +6,11 @@ import 'package:http/http.dart' as http;
 class GoogleMapsPlacesLoader {
   final urlBuilder = UriBuilder();
 
-  Future<String>? placesApiLoader(
-      String address, String radius, String apiKey) async {
+  Future<String>? loadPlacesApi(
+      String coordinates, String radius, String apiKey) async {
     final response = await http.read(Uri.parse(
         urlBuilder.convertSearchTermToUrl(
-            address: address, radius: radius, apiKey: apiKey)));
-    print(urlBuilder.convertSearchTermToUrl(
-        address: address, radius: radius, apiKey: apiKey));
+            coordinates: coordinates, radius: radius, apiKey: apiKey)));
     return response;
   }
 

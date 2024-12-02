@@ -5,11 +5,11 @@ void main() {
   final uriBuilder = UriBuilder();
 
   test(
-      "creates the correct URI for searching for popular State Parks within 2500 meters using our API key",
+      "Creates the correct URL when searching for locations within 1 mile (1609 meters) from the coordinates of BSU",
       () {
     String testURI = uriBuilder.convertSearchTermToUrl(
-        address: 'State Parks', radius: '2500', apiKey: 'foo');
-    expect(testURI,
-        'https://maps.googleapis.com/maps/api/place/textsearch/json?query=every%20locations%20around%20State Parks&radius=2500&key=foo');
+        coordinates: '40.2024,-85.4073', radius: '1609', apiKey: 'foo');
+    expect(testURI.toString(),
+        'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.2024,-85.4073&radius=1609&key=foo');
   });
 }

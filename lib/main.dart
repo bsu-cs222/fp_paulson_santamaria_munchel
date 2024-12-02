@@ -13,6 +13,20 @@ void main() async {
   runApp(const PopularLocationFinderApp());
 }
 
+enum Radius {
+  oneMile,
+  fiveMiles,
+  tenMiles,
+  twentyFiveMiles,
+}
+
+final Map<Radius, String> radiusMap = {
+  Radius.oneMile: '1609',
+  Radius.fiveMiles: '8047',
+  Radius.tenMiles: '16093',
+  Radius.twentyFiveMiles: '40233',
+};
+
 class PopularLocationFinderApp extends StatelessWidget {
   const PopularLocationFinderApp({super.key});
 
@@ -41,6 +55,7 @@ class ApplicationOnStartUp extends StatefulWidget {
 }
 
 class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
+  Radius? radius;
   String initialAddress = 'Searched Address: ';
   final _scrollController = ScrollController();
   final urlBuilder = UriBuilder();
@@ -147,11 +162,57 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
                     ],
                   ),
                 ),
+                ListTile(
+                    title: const Text('1 Mile'),
+                    leading: Radio<Radius>(
+                        value: Radius.oneMile,
+                        groupValue: radius,
+                        onChanged: (Radius? value) {
+                          setState(() {
+                            radius = value;
+                          });
+                        })),
+                ListTile(
+                  title: const Text('5 Mile'),
+                  leading: Radio<Radius>(
+                    value: Radius.fiveMiles,
+                    groupValue: radius,
+                    onChanged: (Radius? value) {
+                      setState(() {
+                        radius = value;
+                      });
+                    },
+                  ),
+                ),
+                ListTile(
+                  title: const Text('10 Mile'),
+                  leading: Radio<Radius>(
+                    value: Radius.tenMiles,
+                    groupValue: radius,
+                    onChanged: (Radius? value) {
+                      setState(() {
+                        radius = value;
+                      });
+                    },
+                  ),
+                ),
+                ListTile(
+                  title: const Text('25 Mile'),
+                  leading: Radio<Radius>(
+                    value: Radius.twentyFiveMiles,
+                    groupValue: radius,
+                    onChanged: (Radius? value) {
+                      setState(() {
+                        radius = value;
+                      });
+                    },
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: MaterialButton(
                     color: Colors.lightBlue,
-                    onPressed: _onButtonPressed,
+                    onPressed: _onSearchButtonPressed,
                     child: const Text('Search'),
                   ),
                 ),
@@ -171,10 +232,9 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     String listStringFormat = '';
     for (int i = 0; i < locationList.locationList.length; i++) {
       listStringFormat +=
-          'Location \#${i + 1}\nName: ${locationList.locationList[i].displayName}\nFormatted Address: ${locationList.locationList[i].formattedAddress}\nNumber of Ratings: ${locationList.locationList[i].userRatingCount}\n\n';
+          'Location #${i + 1}\nName: ${locationList.locationList[i].locationName}\n Address: ${locationList.locationList[i].vicinity}\nNumber of Ratings: ${locationList.locationList[i].userRatingCount}\n\n';
     }
-    final displayedData =
-        '$initialAddress\n\n $locationList\n$listStringFormat';
+    final displayedData = '$initialAddress\n\n$listStringFormat';
     return Center(
       child: Column(
         children: [
@@ -202,17 +262,21 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     );
   }
 
-  void _onButtonPressed() {
-    if (_addressController.text.isNotEmpty) {
-      setState(() {
-        _future = loader.placesApiLoader(
-          _addressController.text,
-          '500',
-          apiKey,
-        );
-        initialAddress += (_addressController.text.toString());
-      });
-    }
+  void _displayResults() {
+    //if (_addressController.text.isNotEmpty && radius != null) {
+    setState(() {
+      _future = loader.loadPlacesApi(
+        '40.2024,-85.4073',
+        radiusMap[radius]!,
+        apiKey,
+      );
+      initialAddress += (_addressController.text.toString());
+    });
+    //}
+  }
+
+  void _onSearchButtonPressed() {
+    _displayResults();
   }
 
   Future<void> _onBackButtonPressed() async {

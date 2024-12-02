@@ -7,15 +7,14 @@ import 'package:test/test.dart';
 void main() {
   GoogleMapsParser parser = GoogleMapsParser();
 
-  test('Parser parses David Owsley Museum information correctly', () async {
+  test('Parser tests if name, address, and user ratings count parse correctly',
+      () async {
     final jsonObject =
-        await _loadSampleData("test/locations_near_ball_state.json");
+        await _loadSampleData('test/locations_near_ball_state.json');
     final locationList = parser.parse(jsonObject);
-    expect(locationList.locationList[0].displayName,
-        "David Owsley Museum of Art at Ball State University");
-    expect(locationList.locationList[0].formattedAddress,
-        "Ball State University, Fine Arts Building, 2021 W Riverside Ave, Muncie, IN 47306, United States");
-    expect(locationList.locationList[0].userRatingCount, 218);
+    expect(locationList.locationList[1].locationName, 'WCRD 91.3 FM');
+    expect(locationList.locationList[1].vicinity, "Lb #200, Muncie");
+    expect(locationList.locationList[1].userRatingCount, 2);
   });
 }
 

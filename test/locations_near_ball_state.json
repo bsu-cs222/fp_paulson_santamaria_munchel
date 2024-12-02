@@ -1,30 +1,69 @@
 {
   "html_attributions": [],
-  "next_page_token": "AdCG2DPoK0QmTvAjfMEGCx0SpGdqt0lvmk64fmSeaAtY6K8r9jocPNzfQ_UIZ-ad6elgLW0VLVA_JTq7SRe9ljxcPHRq4jv3ML_tpt-3jQeNf8nReLlALgoJ2bjoidkQnHATMwaJzckF9KvGbMuLLlydHtURs062jyEQahF5lcRNSsQX8Y1XpdLF-SImzbtTdIJZDEIqEOAQ4LBnU7hhjPeU90dLXr2AP6XGLdbQiGuTL6NBexQDvE4x6g1UZcPXT2fywqUq58ZhwVS4E_QVnwrHDj7Z0j0JpqbPnz-EUg9g8f-wQUb88xVMwiRMJsdRBYRAK_VW0mk1nUV1YIT0mt9A8nH5XEBW-KZG3-EeahTdCh8bASk7RETChTYVdDz8776eaz7HjxdwmV9c6kBZ46Q-FsajIlHnTET7Z7sjEkr7yqf0tPPmTVrgfYQeMqyG1px429skBlHdzxtzniyiSpg",
+  "next_page_token": "AdDdOWrH_1IeXx4pQA5cQ6-3vXlSkMydHAYCK6AQEXL2OgQOHcanGy9G3hp9oTZtKhABvtGetw_YLoxLzSXyz6zptCeznY5rc8kifU0Yd6D_7Ks7OVte8IxqwFn-r6XlYkubDsWm-K_MC7oJITJDP1z_pFV9Wg7eultqWui0z4Of1zFYk6jtr9ZWcGG5xCWJlQIV7-Xh8-Wo6eQNwXTUqoaRAGG-WJPPU1W96oDTjwfuYzgxaZMSEskEJ94tiHCW_i9MM4qn5ZfGPHphik2fVfQx7EA6JBUwbrXskyPh0stlmhKDCjXsnE_hyuWzg8kCKbADWDF6zoS_YX9xT5-haFagiDznt-m4cflONYD3PQ4dbp-z-DD-nQk0MkFo2ljHkz3T3-3GpS_Tg1snAF3Ea1hpJXTGbxVMza9-g-d8Gha76UgA",
   "results": [
     {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "Ball State University, Fine Arts Building, 2021 W Riverside Ave, Muncie, IN 47306, United States",
       "geometry": {
         "location": {
-          "lat": 40.200145,
-          "lng": -85.410388
+          "lat": 40.1936877,
+          "lng": -85.3876714
         },
         "viewport": {
           "northeast": {
-            "lat": 40.2014158298927,
-            "lng": -85.4090368701073
+            "lat": 40.24075504840366,
+            "lng": -85.32073592578332
           },
           "southwest": {
-            "lat": 40.1987161701073,
-            "lng": -85.4117365298927
+            "lat": 40.1491030523438,
+            "lng": -85.47102093362226
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
-      "icon_background_color": "#13B5C7",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
-      "name": "David Owsley Museum of Art at Ball State University",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Muncie",
+      "photos": [
+        {
+          "height": 4624,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109704571844591039130\">Scott Cummings</a>"
+          ],
+          "photo_reference": "AdDdOWq94lkjF1n8NvclmurXARyuoA4XHaZSl3WkfHA4wrJCkeSi5kZ-md9DHuWphPh6JpF0vOoE3_7tbcFjltenb0cXe_Y_lww7r0M0gWG3C_AjgmBpfwgMzYf4uYO9biMBGYtIoawCK6cRVFip7f2WAYaWM_4dNaS9uEAtQqQ1HN79Kh0b",
+          "width": 3468
+        }
+      ],
+      "place_id": "ChIJr671sKY9FYgRpxssriX_irg",
+      "reference": "ChIJr671sKY9FYgRpxssriX_irg",
+      "scope": "GOOGLE",
+      "types": [
+        "locality",
+        "political"
+      ],
+      "vicinity": "Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.2039252,
+          "lng": -85.40890739999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.2053651302915,
+            "lng": -85.4078155697085
+          },
+          "southwest": {
+            "lat": 40.2026671697085,
+            "lng": -85.41051353029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "WCRD 91.3 FM",
       "opening_hours": {
         "open_now": false
       },
@@ -32,129 +71,42 @@
         {
           "height": 3024,
           "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/114049531788298717046\"\u003EGuilherme Duarte Garcia\u003C/a\u003E"
+            "<a href=\"https://maps.google.com/maps/contrib/100251372297866110649\">Zack Vance</a>"
           ],
-          "photo_reference": "AdCG2DPV7jJ1k3mGQCbNkEVBq2ijKZvYVse3DNHaDPvO6wasOzv-JS4TwTsa5AMVCfjAYbg0LqRBiE85WK-GHgw0k34peCCCviHI7wpGCy6S5p7DTeeFG6HC9IIOPXSWH5I37OcUVmiu9YN_dGm4wjIVUbaWPNHBFaTfpPLOQ1Zb2rMb4gbS",
+          "photo_reference": "AdDdOWqKUshXtTWpeXM8oe0hFEc5jBLfjJcERbcFDsOtgDVTO8gFhLlmMgnoN27Xi5RS2Bn_BHNrrbfFO8i7Ptes1i3ZmeAlChkrrHXQV839wLpaYch9inhugnDuCOm3IJgJ3C4vIWHtOFPfABr1zY3W1xdvbJexgEQm4kJ8DxgVYSu8u6Z3",
           "width": 4032
         }
       ],
-      "place_id": "ChIJ6_E10RI9FYgR01r_IdQi3Mc",
+      "place_id": "ChIJq6qqOms9FYgRsMFsAp7deCg",
       "plus_code": {
-        "compound_code": "5HXQ+WR Muncie, Indiana",
-        "global_code": "86GP5HXQ+WR"
+        "compound_code": "6H3R+HC Muncie, IN, USA",
+        "global_code": "86GP6H3R+HC"
       },
-      "rating": 4.8,
-      "reference": "ChIJ6_E10RI9FYgR01r_IdQi3Mc",
-      "types": [
-        "tourist_attraction",
-        "art_gallery",
-        "museum",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 218
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "2120 W University Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.1979795,
-          "lng": -85.4113657
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.1993639298927,
-            "lng": -85.4100380701073
-          },
-          "southwest": {
-            "lat": 40.1966642701073,
-            "lng": -85.4127377298927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
-      "icon_background_color": "#7B9EB0",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
-      "name": "Welcome Center",
-      "opening_hours": {
-        "open_now": false
-      },
-      "place_id": "ChIJ2WOermw9FYgRPdvJnkqyXx4",
-      "plus_code": {
-        "compound_code": "5HXQ+7C Muncie, Indiana",
-        "global_code": "86GP5HXQ+7C"
-      },
-      "rating": 3.7,
-      "reference": "ChIJ2WOermw9FYgRPdvJnkqyXx4",
+      "rating": 5,
+      "reference": "ChIJq6qqOms9FYgRsMFsAp7deCg",
+      "scope": "GOOGLE",
       "types": [
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 6
+      "user_ratings_total": 2,
+      "vicinity": "Lb #200, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "2000 W University Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.197268,
-          "lng": -85.408939
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.1988043798927,
-            "lng": -85.4075804701073
-          },
-          "southwest": {
-            "lat": 40.1961047201073,
-            "lng": -85.4102801298927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
-      "icon_background_color": "#7B9EB0",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "L.A. Pittenger Student Center",
-      "photos": [
-        {
-          "height": 4032,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/106660023755013202230\"\u003EKatie Morris\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DNwM3Dl3u9ZPTgIAXOmoO1sagzWEdID970hBG2SRvdIwgBZa8OuLjPNs6lXQ50K4wkO7wb5i7Kq1P-bAkw0aQn4zUmvs6kuG5BsQ90NQ8nktf1JYUinzNs-XF3KQ1MLgKsygsIySKT9DQ9xwZt8RZCFpFBvJ4BlGS8e8sGoJJlxgKay",
-          "width": 3024
-        }
-      ],
-      "place_id": "ChIJ____ohQ9FYgRkUimx1IsIlw",
-      "plus_code": {
-        "compound_code": "5HWR+WC Muncie, Indiana",
-        "global_code": "86GP5HWR+WC"
-      },
-      "rating": 4.5,
-      "reference": "ChIJ____ohQ9FYgRkUimx1IsIlw",
-      "types": [
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 177
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "2000 W University Ave, Muncie, IN 47306, United States",
       "geometry": {
         "location": {
           "lat": 40.2024944,
-          "lng": -85.4058241
+          "lng": -85.40582409999999
         },
         "viewport": {
           "northeast": {
             "lat": 40.23934785,
-            "lng": -85.38909335
+            "lng": -85.38909335000001
           },
           "southwest": {
-            "lat": 40.17991765,
-            "lng": -85.43662675
+            "lat": 40.17991764999999,
+            "lng": -85.43662674999999
           }
         }
       },
@@ -169,192 +121,43 @@
         {
           "height": 4032,
           "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/114049531788298717046\"\u003EGuilherme Duarte Garcia\u003C/a\u003E"
+            "<a href=\"https://maps.google.com/maps/contrib/114049531788298717046\">Guilherme D. Garcia</a>"
           ],
-          "photo_reference": "AdCG2DOzw6O8rzrltSn3HYArb_8mwiJzRp6pXq9CcMW0HFxVU0CtVtXN9dqV644Amc7mbDFdro8zzWRC4OYwFfhWvnLQwUDOlCNRkLDd1pWrEXvFGYLvpBOAKWdNrUU23rBF8ZM3VXyPZHwgD86RL42It1_o8tA5snyCbf6AoVeXZNa5ZJR9",
+          "photo_reference": "AdDdOWoG68hYWWQVtWJ8ZJlDrXpsNeAvJcbdkzjDq52yDv5orrrw3WRLZo9mxTZ9vXOVCteu_KFVfdfCrVIAC45codoOCt1iFL0UAKNmjBiG_PKiC7HcWMV2uiKufIgtVCEKGcJ9o-lv5eHrHW8Z52YFn_ya3FdEdBP4WX4XknEff2I9ty59",
           "width": 3024
         }
       ],
       "place_id": "ChIJIR58aWY9FYgR9ImfGJvu4OQ",
       "plus_code": {
-        "compound_code": "6H2V+XM Muncie, Indiana",
+        "compound_code": "6H2V+XM Muncie, IN, USA",
         "global_code": "86GP6H2V+XM"
       },
       "rating": 4.5,
       "reference": "ChIJIR58aWY9FYgR9ImfGJvu4OQ",
+      "scope": "GOOGLE",
       "types": [
         "university",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 366
+      "user_ratings_total": 367,
+      "vicinity": "2000 West University Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "1101 N McKinley Ave, Muncie, IN 47306, United States",
       "geometry": {
         "location": {
-          "lat": 40.2026717,
-          "lng": -85.4084257
+          "lat": 40.20117699999999,
+          "lng": -85.4069586
         },
         "viewport": {
           "northeast": {
-            "lat": 40.2040355298927,
-            "lng": -85.4068967201073
+            "lat": 40.2020845802915,
+            "lng": -85.40561286970849
           },
           "southwest": {
-            "lat": 40.2013358701073,
-            "lng": -85.4095963798927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
-      "icon_background_color": "#4B96F3",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
-      "name": "Ball State Bookstore",
-      "opening_hours": {
-        "open_now": false
-      },
-      "photos": [
-        {
-          "height": 1800,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/113041542169236715915\"\u003EChad\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DO8EU2jZgQSExa9s5HKgTEsefzTw4C3oiklrkMrJxmBXlXwIfNAlTFVpm8pD6FJGOwhV_DDdV4pk5BR2rCIYLwDa_bdFX9hgINWXfYVIyHY6a8vJjIzz4RcWhDu1UIAZG0gaPmshuPt9s2xOTfSTU41uWvO-lKZBILI6mMMMeyQZ1RO",
-          "width": 4000
-        }
-      ],
-      "place_id": "ChIJbYKcdG49FYgRD_A2QMIBYLg",
-      "plus_code": {
-        "compound_code": "6H3R+3J Muncie, Indiana",
-        "global_code": "86GP6H3R+3J"
-      },
-      "rating": 3.8,
-      "reference": "ChIJbYKcdG49FYgRD_A2QMIBYLg",
-      "types": [
-        "book_store",
-        "store",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 166
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "2000 W University Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.197237,
-          "lng": -85.408903
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.1987896298927,
-            "lng": -85.4075636701073
-          },
-          "southwest": {
-            "lat": 40.1960899701073,
-            "lng": -85.4102633298927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
-      "icon_background_color": "#FF9E67",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
-      "name": "Starbucks",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 900,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/116957225984624432734\"\u003EStarbucks\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DMGgCm7iJRJYm2cPOVdtC2eZo3mcGChBnJLmMjbemZPz4sfly5NwxelOnN2llLukRqcTwNX_bk0OltFUCYjEL2kookscx6h_hwqGAekyAOf4p0kYdVeBogMZtDHk0DUNGNDUg74rhJeWbhjXOS_Z6eEMvQziNc3d31CN6kmZwFVZGQ",
-          "width": 1600
-        }
-      ],
-      "place_id": "ChIJbcut1hI9FYgRqqZz9q3ag6k",
-      "plus_code": {
-        "compound_code": "5HWR+VC Muncie, Indiana",
-        "global_code": "86GP5HWR+VC"
-      },
-      "price_level": 2,
-      "rating": 4.3,
-      "reference": "ChIJbcut1hI9FYgRqqZz9q3ag6k",
-      "types": [
-        "cafe",
-        "store",
-        "point_of_interest",
-        "food",
-        "establishment"
-      ],
-      "user_ratings_total": 64
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "2800 W Bethel Ave, Muncie, IN 47304, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.214841,
-          "lng": -85.4180965
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.2160914798927,
-            "lng": -85.4168286201073
-          },
-          "southwest": {
-            "lat": 40.2133918201073,
-            "lng": -85.4195282798927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
-      "icon_background_color": "#7B9EB0",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Alumni Center",
-      "photos": [
-        {
-          "height": 4032,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/111576108757134050777\"\u003EA Google User\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DPzerHZpwqv-u8thiy6oI_2ETECB6-0uYyhe3emm0aHLh3fAoTd_-b0_jh6TJPTAr_FXCzVNckc1AMWMwrRHpf5CHEund0trYLwO_hudkjPitJJMGd04E_ii90luOwfgH4ZcQZDhT8oVeM5aEG-5SnVLO5qJNBR6cs69pFBHeirZyWz",
-          "width": 3024
-        }
-      ],
-      "place_id": "ChIJgS-NGV49FYgRMLtUOWeRY2E",
-      "plus_code": {
-        "compound_code": "6H7J+VM Muncie, Indiana",
-        "global_code": "86GP6H7J+VM"
-      },
-      "rating": 4.6,
-      "reference": "ChIJgS-NGV49FYgRMLtUOWeRY2E",
-      "types": [
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 49
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "1800 W Riverside Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.2009019,
-          "lng": -85.4069606
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.2020854298927,
-            "lng": -85.4056120201073
-          },
-          "southwest": {
-            "lat": 40.1993857701073,
-            "lng": -85.4083116798927
+            "lat": 40.1993866197085,
+            "lng": -85.4083108302915
           }
         }
       },
@@ -367,608 +170,641 @@
       },
       "photos": [
         {
-          "height": 3024,
+          "height": 1375,
           "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/117560692142910216215\"\u003EWilliam Cowling\u003C/a\u003E"
+            "<a href=\"https://maps.google.com/maps/contrib/112939078067109241224\">John R. Emens College-Community Auditorium</a>"
           ],
-          "photo_reference": "AdCG2DN5rrYbnBCBvBMXZHbosm-6B8a0xbjyv4ssc8lZMdmhe13yrPKjh_eJomBO0kch6pSBUEoySGwPK9RVHqUTNsttUouZkmptDvs5N5NJVJMjzOe-DtF1JmxPOpOjhR7YqGN-eGxrNESMsGE079g5-4ldZes4eM8vGSoKosRYcR6CLeTf",
-          "width": 4032
+          "photo_reference": "AdDdOWp21KlGgVJ1kpJLT8SwIlPY4K4shkS_H4LF6YiQZkkX2pRjwAfcFFOosxmi77yTkGb15m-1LwrCprxxTpkVP3jSTDLUM_flzHH6BRTCIozr3Pkc8WhzB3SJ-SowhmCz3cQLEWAomz52yThm2MmAJCTAAX9Ea4w49cEuJy2y3jjOi9U",
+          "width": 2048
         }
       ],
       "place_id": "ChIJXRN2n209FYgR8qMkePjoP7o",
       "plus_code": {
-        "compound_code": "6H2V+F6 Muncie, Indiana",
+        "compound_code": "6H2V+F6 Muncie, IN, USA",
         "global_code": "86GP6H2V+F6"
       },
       "rating": 4.6,
       "reference": "ChIJXRN2n209FYgR8qMkePjoP7o",
+      "scope": "GOOGLE",
       "types": [
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 438
+      "user_ratings_total": 439,
+      "vicinity": "1800 West Riverside Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "North Dining 201, 1525 N McKinley Ave, Muncie, IN 47306, United States",
       "geometry": {
         "location": {
-          "lat": 40.207463,
-          "lng": -85.4082955
+          "lat": 40.194182,
+          "lng": -85.418138
         },
         "viewport": {
           "northeast": {
-            "lat": 40.2088125798927,
-            "lng": -85.4068617701073
+            "lat": 40.1954404802915,
+            "lng": -85.41678836970848
           },
           "southwest": {
-            "lat": 40.2061129201073,
-            "lng": -85.4095614298927
+            "lat": 40.1927425197085,
+            "lng": -85.4194863302915
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "icon_background_color": "#FF9E67",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
-      "name": "North",
-      "opening_hours": {
-        "open_now": false
-      },
-      "photos": [
-        {
-          "height": 2340,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/116458939217950291544\"\u003ESimon Platt\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DNhF5CV7_gdY6BSvQVIjUjWpSDwakRBDiSq1qqC6uitypfp4x92LxrjgMZy1Z8-i3vnRc6JXE4d6sNH2AEEYe9Scq6DwViInLu709ESVpsrAXyjWcPYvyG7ty2RqhLUn5dd2ekcalw46eTdCwYgHNSoyVNiJNt4xJORQr1sMqizuxKk",
-          "width": 4160
-        }
-      ],
-      "place_id": "ChIJZQj40G09FYgRvqsOZTmJg3Q",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Meridian Services Primary",
+      "place_id": "ChIJVWn5JT49FYgRnZq6tUcUJpo",
       "plus_code": {
-        "compound_code": "6H4R+XM Muncie, Indiana",
-        "global_code": "86GP6H4R+XM"
+        "compound_code": "5HVJ+MP Muncie, IN, USA",
+        "global_code": "86GP5HVJ+MP"
       },
-      "price_level": 1,
-      "rating": 4.3,
-      "reference": "ChIJZQj40G09FYgRvqsOZTmJg3Q",
+      "rating": 5,
+      "reference": "ChIJVWn5JT49FYgRnZq6tUcUJpo",
+      "scope": "GOOGLE",
       "types": [
-        "restaurant",
-        "store",
+        "health",
         "point_of_interest",
-        "food",
         "establishment"
       ],
-      "user_ratings_total": 86
+      "user_ratings_total": 1,
+      "vicinity": "110 North Tillotson Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "1606 W University Ave, Muncie, IN 47303, United States",
       "geometry": {
         "location": {
-          "lat": 40.1977678,
-          "lng": -85.4050185
+          "lat": 40.197283,
+          "lng": -85.414193
         },
         "viewport": {
           "northeast": {
-            "lat": 40.1991158298927,
-            "lng": -85.4036431701073
+            "lat": 40.1987324802915,
+            "lng": -85.4128479697085
           },
           "southwest": {
-            "lat": 40.1964161701073,
-            "lng": -85.4063428298927
+            "lat": 40.1960345197085,
+            "lng": -85.4155459302915
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
-      "icon_background_color": "#FF9E67",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
-      "name": "The Cup",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Dr. Bracken J. De Witt, MD",
+      "place_id": "ChIJjatB3hQ9FYgR9rNP_0MZIYo",
+      "plus_code": {
+        "compound_code": "5HWP+W8 Muncie, IN, USA",
+        "global_code": "86GP5HWP+W8"
+      },
+      "reference": "ChIJjatB3hQ9FYgR9rNP_0MZIYo",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.19707229999999,
+          "lng": -85.41482479999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.19862308029149,
+            "lng": -85.41344601970849
+          },
+          "southwest": {
+            "lat": 40.1959251197085,
+            "lng": -85.41614398029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Nyalugwe Mabala G MD",
+      "place_id": "ChIJjatB3hQ9FYgRjSDwcSUeM1g",
+      "plus_code": {
+        "compound_code": "5HWP+R3 Muncie, IN, USA",
+        "global_code": "86GP5HWP+R3"
+      },
+      "reference": "ChIJjatB3hQ9FYgRjSDwcSUeM1g",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.19707229999999,
+          "lng": -85.41482479999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.19862308029149,
+            "lng": -85.41344601970849
+          },
+          "southwest": {
+            "lat": 40.1959251197085,
+            "lng": -85.41614398029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Dr. Jan R. Kornilow, MD",
+      "place_id": "ChIJjatB3hQ9FYgRejr7iuvDZe4",
+      "plus_code": {
+        "compound_code": "5HWP+R3 Muncie, IN, USA",
+        "global_code": "86GP5HWP+R3"
+      },
+      "rating": 5,
+      "reference": "ChIJjatB3hQ9FYgRejr7iuvDZe4",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.1968976,
+          "lng": -85.4146284
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.1985345302915,
+            "lng": -85.41329091970849
+          },
+          "southwest": {
+            "lat": 40.1958365697085,
+            "lng": -85.41598888029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Dr. Gabriel E. Reising, MD",
+      "place_id": "ChIJjatB3hQ9FYgR-KfKq1Bjfzo",
+      "plus_code": {
+        "compound_code": "5HWP+Q4 Muncie, IN, USA",
+        "global_code": "86GP5HWP+Q4"
+      },
+      "reference": "ChIJjatB3hQ9FYgR-KfKq1Bjfzo",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.19707229999999,
+          "lng": -85.41482479999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.19862308029149,
+            "lng": -85.41344601970849
+          },
+          "southwest": {
+            "lat": 40.1959251197085,
+            "lng": -85.41614398029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Moran Catherine C MD",
+      "place_id": "ChIJjatB3hQ9FYgRfd_xP4TIS-k",
+      "plus_code": {
+        "compound_code": "5HWP+R3 Muncie, IN, USA",
+        "global_code": "86GP5HWP+R3"
+      },
+      "reference": "ChIJjatB3hQ9FYgRfd_xP4TIS-k",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.19707229999999,
+          "lng": -85.41482479999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.19862308029149,
+            "lng": -85.41344601970849
+          },
+          "southwest": {
+            "lat": 40.1959251197085,
+            "lng": -85.41614398029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Spoljoric Jason J MD",
+      "place_id": "ChIJjatB3hQ9FYgRiLDit1qh2Mw",
+      "plus_code": {
+        "compound_code": "5HWP+R3 Muncie, IN, USA",
+        "global_code": "86GP5HWP+R3"
+      },
+      "reference": "ChIJjatB3hQ9FYgRiLDit1qh2Mw",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.19685630000001,
+          "lng": -85.4151473
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.1981746302915,
+            "lng": -85.4139969197085
+          },
+          "southwest": {
+            "lat": 40.1954766697085,
+            "lng": -85.4166948802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Dr. Armine Zakharian, MD",
+      "place_id": "ChIJjatB3hQ9FYgRe8DDTtG75e0",
+      "plus_code": {
+        "compound_code": "5HWM+PW Muncie, IN, USA",
+        "global_code": "86GP5HWM+PW"
+      },
+      "rating": 2,
+      "reference": "ChIJjatB3hQ9FYgRe8DDTtG75e0",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.1968976,
+          "lng": -85.4146284
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.1985345302915,
+            "lng": -85.41329091970849
+          },
+          "southwest": {
+            "lat": 40.1958365697085,
+            "lng": -85.41598888029151
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Dr. Doyle L. Stephens, MD",
+      "place_id": "ChIJjatB3hQ9FYgRBQEJvRdx2mw",
+      "plus_code": {
+        "compound_code": "5HWP+Q4 Muncie, IN, USA",
+        "global_code": "86GP5HWP+Q4"
+      },
+      "rating": 5,
+      "reference": "ChIJjatB3hQ9FYgRBQEJvRdx2mw",
+      "scope": "GOOGLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.1934736,
+          "lng": -85.4186036
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.1947115302915,
+            "lng": -85.41735591970851
+          },
+          "southwest": {
+            "lat": 40.1920135697085,
+            "lng": -85.42005388029152
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Walgreens",
       "opening_hours": {
         "open_now": true
       },
       "photos": [
         {
-          "height": 3120,
+          "height": 2156,
           "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/110220180772563459850\"\u003ET Cox\u003C/a\u003E"
+            "<a href=\"https://maps.google.com/maps/contrib/111080024346330238665\">Sergei Sobolev</a>"
           ],
-          "photo_reference": "AdCG2DMJgwwCC5kVZde9Ay1FwuhhIxQ-fgoSaHUJVRu-ZqQfl4K92krhui9CUSf6GFVapAXTY4yGv_kXe01wEUgBWukktFpTFb_iqFdM_TO6cYA2ccrW1l8QjQaX4dPBxKyyoM5hZfS25Evyk_BhfUoMFfr4_MteeYMaglm3fkvpEAA_fkvl",
-          "width": 4160
+          "photo_reference": "AdDdOWpg6MUfpCajrC2zOab7PW0tQpk6DbE-Uz1YD3QiXTkbaOxrY6-MbachMnWJFlEqcxHfcPfd6Q_H43jiYbkrZD4me2bLw7CwowBCF41E-_2ZhAnjLUSyUtIBsRU8vdm9e2kp_GHU0wBgr5-6Muw_B1-qK5xdYdIiCNRx91K3VX4_lcay",
+          "width": 2875
         }
       ],
-      "place_id": "ChIJDdoYzHI9FYgRvpjFXK4lZ-A",
+      "place_id": "ChIJA7jGCj49FYgRIIWuQmHTq8c",
       "plus_code": {
-        "compound_code": "5HXW+42 Muncie, Indiana",
-        "global_code": "86GP5HXW+42"
+        "compound_code": "5HVJ+9H Muncie, IN, USA",
+        "global_code": "86GP5HVJ+9H"
       },
       "price_level": 2,
-      "rating": 4.2,
-      "reference": "ChIJDdoYzHI9FYgRvpjFXK4lZ-A",
+      "rating": 3.7,
+      "reference": "ChIJA7jGCj49FYgRIIWuQmHTq8c",
+      "scope": "GOOGLE",
       "types": [
-        "cafe",
+        "drugstore",
+        "convenience_store",
+        "health",
+        "clothing_store",
         "store",
-        "point_of_interest",
         "food",
-        "establishment"
-      ],
-      "user_ratings_total": 414
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "301 N Talley Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.1962572,
-          "lng": -85.4104756
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.1976060298927,
-            "lng": -85.4091541201073
-          },
-          "southwest": {
-            "lat": 40.1949063701073,
-            "lng": -85.4118537798927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
-      "icon_background_color": "#7B9EB0",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
-      "name": "The Indiana Academy for Science, Mathematics, and Humanities",
-      "photos": [
-        {
-          "height": 437,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/101246932831533672040\"\u003EElijah Estrada\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DNSgtUll3H0MhKUzyqxWFTYT-1LECy2coWnF9w46lgLkOCANQEfyu3Gq41k4pITzrQN4q-03nzneuiMA72aEed5O4jBIyY9KcaKSlgejoHArmSiL2API7OuSxx-khFZYZA5XuhnRsIO9VKEKNBuAHDarj1vZS5P63IIdfI1dmaRqp04",
-          "width": 777
-        }
-      ],
-      "place_id": "ChIJS_34v289FYgRjU-qETdqnb0",
-      "plus_code": {
-        "compound_code": "5HWQ+GP Muncie, Indiana",
-        "global_code": "86GP5HWQ+GP"
-      },
-      "rating": 4.5,
-      "reference": "ChIJS_34v289FYgRjU-qETdqnb0",
-      "types": [
-        "secondary_school",
-        "school",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 16
+      "user_ratings_total": 33,
+      "vicinity": "2720 West Jackson Street, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "2000 W University Ave, Muncie, IN 47306, United States",
       "geometry": {
         "location": {
-          "lat": 40.1971281,
-          "lng": -85.4089236
+          "lat": 40.1967895,
+          "lng": -85.4156142
         },
         "viewport": {
           "northeast": {
-            "lat": 40.1987351798927,
-            "lng": -85.4075647201073
+            "lat": 40.19814343029149,
+            "lng": -85.41423776970849
           },
           "southwest": {
-            "lat": 40.1960355201073,
-            "lng": -85.4102643798927
+            "lat": 40.1954454697085,
+            "lng": -85.41693573029151
           }
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
       "icon_background_color": "#7B9EB0",
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Ball State University Conferences and Special Events",
-      "place_id": "ChIJ6_E10RI9FYgRrHp1IHcF2xM",
+      "name": "Ball Memorial Hospital: Adams Jerome M MD",
+      "place_id": "ChIJjatB3hQ9FYgRVniPrVkZ2Pc",
       "plus_code": {
-        "compound_code": "5HWR+VC Muncie, Indiana",
-        "global_code": "86GP5HWR+VC"
+        "compound_code": "5HWM+PQ Muncie, IN, USA",
+        "global_code": "86GP5HWM+PQ"
       },
-      "rating": 0,
-      "reference": "ChIJ6_E10RI9FYgRrHp1IHcF2xM",
+      "reference": "ChIJjatB3hQ9FYgRVniPrVkZ2Pc",
+      "scope": "GOOGLE",
       "types": [
-        "atm",
-        "finance",
+        "doctor",
+        "health",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 0
+      "vicinity": "2401 West University Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "Muncie, IN 47304, United States",
       "geometry": {
         "location": {
-          "lat": 40.1982917,
-          "lng": -85.4102773
+          "lat": 40.197283,
+          "lng": -85.414193
         },
         "viewport": {
           "northeast": {
-            "lat": 40.1996415298927,
-            "lng": -85.4089274701073
+            "lat": 40.1987324802915,
+            "lng": -85.4128479697085
           },
           "southwest": {
-            "lat": 40.1969418701073,
-            "lng": -85.4116271298927
+            "lat": 40.1960345197085,
+            "lng": -85.4155459302915
           }
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
       "icon_background_color": "#7B9EB0",
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Beneficence",
-      "photos": [
-        {
-          "height": 4032,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/114049531788298717046\"\u003EGuilherme Duarte Garcia\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DNWqmZnwHv6F0Lc3N4isNzkK8t8HtLw59s3Wep-zYX9R-WhDuBmhyGSM8CBPfSkkVL5u_x1lHs57csEGW4BqzEzoDBmsKV4YwNYndibbdsyC4iHrQewiadk_2sbsZi2hkjE3190y4jSBQrYoaysRxA0QoFmi1oTmQActQ64HfPQWtHB",
-          "width": 3024
-        }
-      ],
-      "place_id": "ChIJe3GFyGw9FYgRyS7s_N6cnfA",
+      "name": "RAI Dialysis Care Center",
+      "place_id": "ChIJjatB3hQ9FYgRSxW2oeeybF4",
       "plus_code": {
-        "compound_code": "5HXQ+8V Muncie, Indiana",
-        "global_code": "86GP5HXQ+8V"
+        "compound_code": "5HWP+W8 Muncie, IN, USA",
+        "global_code": "86GP5HWP+W8"
       },
-      "rating": 4.8,
-      "reference": "ChIJe3GFyGw9FYgRyS7s_N6cnfA",
+      "reference": "ChIJjatB3hQ9FYgRSxW2oeeybF4",
+      "scope": "GOOGLE",
       "types": [
-        "university",
+        "hospital",
+        "health",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 13
+      "vicinity": "2401 West University Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "1623 W University Ave, Muncie, IN 47303, United States",
       "geometry": {
         "location": {
-          "lat": 40.1975503,
-          "lng": -85.405398
+          "lat": 40.19707229999999,
+          "lng": -85.41482479999999
         },
         "viewport": {
           "northeast": {
-            "lat": 40.1989430298927,
-            "lng": -85.4040807201073
+            "lat": 40.19862308029149,
+            "lng": -85.41344601970849
           },
           "southwest": {
-            "lat": 40.1962433701073,
-            "lng": -85.4067803798927
+            "lat": 40.1959251197085,
+            "lng": -85.41614398029151
           }
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
       "icon_background_color": "#7B9EB0",
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Village Promenade",
-      "opening_hours": {
-        "open_now": false
-      },
-      "photos": [
-        {
-          "height": 3024,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/109848232159828475919\"\u003EKris Thornburg\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DPyosTP7Nt7G1WDBjbVytNk0WfmS_kM9tEmXE01RU3MiBSAjFdcmfaDkFH7RzZGNYMJYdAr3lFEpwFAYfRcufQMK8ibFl1sxz20XFr9cQg0KOD4AEg8VyoMZuJ-DNKHSfX6lks65IAKcFEp85D6EqIvgSrjcRasn2Gmjh3pLVrE0848",
-          "width": 4032
-        }
-      ],
-      "place_id": "ChIJ2ZBctHI9FYgRT8opnTjJjA8",
+      "name": "Dr. John A. Nahre, MD",
+      "place_id": "ChIJjatB3hQ9FYgRIKbBY511rPU",
       "plus_code": {
-        "compound_code": "5HXV+2R Muncie, Indiana",
-        "global_code": "86GP5HXV+2R"
+        "compound_code": "5HWP+R3 Muncie, IN, USA",
+        "global_code": "86GP5HWP+R3"
       },
-      "rating": 3.6,
-      "reference": "ChIJ2ZBctHI9FYgRT8opnTjJjA8",
+      "reference": "ChIJjatB3hQ9FYgRIKbBY511rPU",
+      "scope": "GOOGLE",
       "types": [
+        "doctor",
+        "health",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 193
+      "vicinity": "2401 West University Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "W White River Blvd & North Wheeling Ave, Muncie, IN 47303, United States",
       "geometry": {
         "location": {
-          "lat": 40.1964088,
-          "lng": -85.3917809
+          "lat": 40.197283,
+          "lng": -85.414193
         },
         "viewport": {
           "northeast": {
-            "lat": 40.1979807798927,
-            "lng": -85.38908865
+            "lat": 40.1987324802915,
+            "lng": -85.4128479697085
           },
           "southwest": {
-            "lat": 40.1952811201073,
-            "lng": -85.39353685
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
-      "icon_background_color": "#4DB546",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
-      "name": "Tuhey Park",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 2268,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/114006022219714018901\"\u003EEric Zago\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DMRUDpPWVZXW1wLRBRQW9rxKN1pwDRoTYI8cCYFX0MU4EgoZXDMYnzFgdm3v9crSyTM2onM8rZKD9x0jcOPPRlj1YSCJ03tKPXqiwwJ5BkbcIlZVB8MgT6_tRVrg6Tcd_Iwpjuh0yPe_iZEwKiqOMSK7Y5SSXV4kxsQa5gfuEX6J8Kw",
-          "width": 4032
-        }
-      ],
-      "place_id": "ChIJ7yH7-qE9FYgRiowBYIeFazs",
-      "plus_code": {
-        "compound_code": "5JW5+H7 Muncie, Indiana",
-        "global_code": "86GP5JW5+H7"
-      },
-      "rating": 4.3,
-      "reference": "ChIJ7yH7-qE9FYgRiowBYIeFazs",
-      "types": [
-        "park",
-        "tourist_attraction",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 434
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "401 S Walnut St, Muncie, IN 47305, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.1910006,
-          "lng": -85.3866791
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.1923504298927,
-            "lng": -85.3852893201073
-          },
-          "southwest": {
-            "lat": 40.1896507701073,
-            "lng": -85.3879889798927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
-      "icon_background_color": "#FF9E67",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
-      "name": "The Caffeinery",
-      "opening_hours": {
-        "open_now": false
-      },
-      "photos": [
-        {
-          "height": 720,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/111619589891826566571\"\u003EThe Caffeinery\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DPetyHzc-AQtmmaQXTWdL7PjAX_7twNy8_Hgs966GuNqtLCT5tPnSMz2I3NpLwfGjNxxCshJKcEfwx5axMv78woBuJS_DXi9ihpUNKrSp9DBYfo4E_d4mP0PKF5DGYD6p76PgUIPs6Rzl1t_MyPwo_SlGvUBJWFjXykMrgvEayhcDEK",
-          "width": 480
-        }
-      ],
-      "place_id": "ChIJLQZQu6Q9FYgRNu6SgXAA5rc",
-      "plus_code": {
-        "compound_code": "5JR7+C8 Muncie, Indiana",
-        "global_code": "86GP5JR7+C8"
-      },
-      "price_level": 2,
-      "rating": 4.8,
-      "reference": "ChIJLQZQu6Q9FYgRNu6SgXAA5rc",
-      "types": [
-        "cafe",
-        "store",
-        "point_of_interest",
-        "food",
-        "establishment"
-      ],
-      "user_ratings_total": 531
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "901 N McKinley Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.2006644,
-          "lng": -85.4081623
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.2020280298927,
-            "lng": -85.4067847201073
-          },
-          "southwest": {
-            "lat": 40.1993283701073,
-            "lng": -85.4094843798927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
-      "icon_background_color": "#7B9EB0",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
-      "name": "Teachers College, Ball State University",
-      "opening_hours": {
-        "open_now": false
-      },
-      "photos": [
-        {
-          "height": 1960,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/102540255193233530689\"\u003ECyrus Esteban\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DNcfNR_5WAP5aTpP-TmYjMRmzIsc7bxWOJVCs6UG2aVen8kEIw9MObd-EItpKLk5sQud5rnzi0n1NFLVLIOITZfoTE9ecDmf8ejKA_r3gK1EDz-XqNT-x5lJ45LFbIelsZWeCy4P_aPlRc4K2CFsUvfgG7uKJRrMAzeegElTb0N3iqX",
-          "width": 4032
-        }
-      ],
-      "place_id": "ChIJ8V2DsG09FYgRZwRJESOnxQA",
-      "plus_code": {
-        "compound_code": "6H2R+7J Muncie, Indiana",
-        "global_code": "86GP6H2R+7J"
-      },
-      "rating": 4.9,
-      "reference": "ChIJ8V2DsG09FYgRZwRJESOnxQA",
-      "types": [
-        "university",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 11
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "4500 W Bethel Ave, Muncie, IN 47304, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.2219661,
-          "lng": -85.4387386
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.2231261298927,
-            "lng": -85.4373917701073
-          },
-          "southwest": {
-            "lat": 40.2204264701073,
-            "lng": -85.4400914298927
+            "lat": 40.1960345197085,
+            "lng": -85.4155459302915
           }
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
       "icon_background_color": "#7B9EB0",
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "University Village Apartments",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 768,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/116915085071334176307\"\u003EA Google User\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DPyCOncQlngXNmT35JmwbONvCT3RMFdFhiYYYKUU65ZcWaEUbyc5BhC0mjKJv7kIvpziZgtEV7jyzvqGnBJEhq9x3qFegLZxUvOgRoUYDBvGG20WEM7q61PgAkJRyd7pev6HCbqTMPbMeo55pwWJqgBPMcJ6vTsFVj2Hs3fAnvmQDqM",
-          "width": 1024
-        }
-      ],
-      "place_id": "ChIJc13QLwAYFYgRJOXSrejzPqo",
+      "name": "Ball Memorial Hospital: Mason William C MD",
+      "place_id": "ChIJjatB3hQ9FYgRjbeygdcZ03Y",
       "plus_code": {
-        "compound_code": "6HC6+QG Muncie, Indiana",
-        "global_code": "86GP6HC6+QG"
+        "compound_code": "5HWP+W8 Muncie, IN, USA",
+        "global_code": "86GP5HWP+W8"
       },
-      "rating": 4,
-      "reference": "ChIJc13QLwAYFYgRJOXSrejzPqo",
+      "reference": "ChIJjatB3hQ9FYgRjbeygdcZ03Y",
+      "scope": "GOOGLE",
       "types": [
+        "doctor",
+        "health",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 368
+      "vicinity": "2401 West University Avenue, Muncie"
     },
     {
       "business_status": "OPERATIONAL",
-      "formatted_address": "2000 W University Ave, Muncie, IN 47306, United States",
       "geometry": {
         "location": {
-          "lat": 40.1999018,
-          "lng": -85.4112934
+          "lat": 40.197283,
+          "lng": -85.414193
         },
         "viewport": {
           "northeast": {
-            "lat": 40.2012516298927,
-            "lng": -85.4099435701073
+            "lat": 40.1987324802915,
+            "lng": -85.4128479697085
           },
           "southwest": {
-            "lat": 40.1985519701073,
-            "lng": -85.4126432298927
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
-      "icon_background_color": "#7B9EB0",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
-      "name": "Ball State University Observatory",
-      "opening_hours": {
-        "open_now": true
-      },
-      "place_id": "ChIJoQ40hGw9FYgRI-4wjBqR4YI",
-      "plus_code": {
-        "compound_code": "5HXQ+XF Muncie, Indiana",
-        "global_code": "86GP5HXQ+XF"
-      },
-      "rating": 0,
-      "reference": "ChIJoQ40hGw9FYgRI-4wjBqR4YI",
-      "types": [
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 0
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "1700 W Neely Ave, Muncie, IN 47306, United States",
-      "geometry": {
-        "location": {
-          "lat": 40.205745,
-          "lng": -85.4062144
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 40.2066397798927,
-            "lng": -85.4049621701073
-          },
-          "southwest": {
-            "lat": 40.2039401201073,
-            "lng": -85.4076618298927
+            "lat": 40.1960345197085,
+            "lng": -85.4155459302915
           }
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
       "icon_background_color": "#7B9EB0",
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Jo Ann Gora Student Recreation and Wellness Center",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 3096,
-          "html_attributions": [
-            "\u003Ca href=\"https://maps.google.com/maps/contrib/102068626311562463350\"\u003Esherdan29\u003C/a\u003E"
-          ],
-          "photo_reference": "AdCG2DODTVBqexffHmQFP2OTmKh-gu2Fn2DN1fhOQeKb0pFBq519d_PGJLcH1QbGtE2aoeImXREAfsjBtv3K1NTUKx8FFdA5JRcjnlhtjj7cmZnFo_hDFLvvTTu7d__vVRNk2z9VFicifbANMWQvvNWccCrEDvYtVxRBv67WcEEdNrUP9l9A",
-          "width": 4128
-        }
-      ],
-      "place_id": "ChIJr05NtnE9FYgR_KHg23Qh104",
+      "name": "Ball Memorial Hospital: Spier Cindy MD",
+      "place_id": "ChIJjatB3hQ9FYgRwFl27yUTUp8",
       "plus_code": {
-        "compound_code": "6H4V+7G Muncie, Indiana",
-        "global_code": "86GP6H4V+7G"
+        "compound_code": "5HWP+W8 Muncie, IN, USA",
+        "global_code": "86GP5HWP+W8"
       },
-      "rating": 4.6,
-      "reference": "ChIJr05NtnE9FYgR_KHg23Qh104",
+      "reference": "ChIJjatB3hQ9FYgRwFl27yUTUp8",
+      "scope": "GOOGLE",
       "types": [
+        "doctor",
+        "health",
         "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 158
+      "vicinity": "2401 West University Avenue, Muncie"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 40.2155084,
+          "lng": -85.4091804
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.21893348848003,
+            "lng": -85.39684126054163
+          },
+          "southwest": {
+            "lat": 40.20754203641383,
+            "lng": -85.41994045785074
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Anthony",
+      "place_id": "ChIJ9bzJFGM9FYgRjmM5_BwxI0c",
+      "reference": "ChIJ9bzJFGM9FYgRjmM5_BwxI0c",
+      "scope": "GOOGLE",
+      "types": [
+        "neighborhood",
+        "political"
+      ],
+      "vicinity": "Muncie"
     }
   ],
   "status": "OK"
 }
-
-
