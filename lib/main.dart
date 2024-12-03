@@ -65,6 +65,8 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   final mainKey = GlobalKey<AddressFormState>();
   Future<String>? _future;
   final apiKey = dotenv.env['PLACES_API_KEY'].toString();
+  late String latitude;
+  late String longitude;
 
   @override
   Widget build(BuildContext context) {
@@ -136,10 +138,17 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       PlaceSearchField(
+                        isLatLongRequired: true,
                         controller: _addressController,
                         apiKey: apiKey,
                         onPlaceSelected: (placeId, latLng) async {
                           _addressController.text = placeId.description;
+                          latitude = latLng!
+                              .toMap()['result']['geometry']['location']['lat']
+                              .toString();
+                          longitude = latLng!
+                              .toMap()['result']['geometry']['location']['lng']
+                              .toString();
                         },
                         decorationBuilder: (context, child) {
                           return Material(
@@ -266,7 +275,7 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
     if (_addressController.text.isNotEmpty && radius != null) {
       setState(() {
         _future = loader.loadPlacesApi(
-          '40.2024,-85.4073', //this needs to be changed to a new value based on coordinates of the addressController search
+          '$latitude,$longitude',
           radiusMap[radius]!,
           apiKey,
         );
