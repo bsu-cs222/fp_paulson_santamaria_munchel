@@ -1,8 +1,7 @@
+import 'package:fp_paulson_santamaria_munchel/google_maps_places_loader.dart';
+
 class UriBuilder {
-  String convertSearchTermToUrl(
-      {required String coordinates,
-      required String radius,
-      required String apiKey}) {
-    return 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=$coordinates&radius=$radius&key=$apiKey';
+  String buildUri(UserSearchRequest dataRequest) {
+    return 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${dataRequest.coordinates}&radius=${dataRequest.radius}&key=${dataRequest.apiKey}';
   }
 }

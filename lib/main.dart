@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fp_paulson_santamaria_munchel/google_maps_parser.dart';
 import 'package:fp_paulson_santamaria_munchel/google_maps_places_loader.dart';
-import 'package:fp_paulson_santamaria_munchel/uri_builder.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:address_form/address_form.dart';
+import 'package:fp_paulson_santamaria_munchel/place_detail_model_parser.dart';
 
 import 'package:google_places_api_flutter/google_places_api_flutter.dart';
 
@@ -58,15 +58,14 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   Radius? radius;
   String initialAddress = 'Searched Address: ';
   final _scrollController = ScrollController();
-  final urlBuilder = UriBuilder();
   final parser = GoogleMapsParser();
   final loader = GoogleMapsPlacesLoader();
   final _addressController = TextEditingController();
   final mainKey = GlobalKey<AddressFormState>();
   Future<String>? _future;
   final apiKey = dotenv.env['PLACES_API_KEY'].toString();
-  late String latitude;
-  late String longitude;
+  final PlaceDetailModelParser coordinateParser = PlaceDetailModelParser();
+  late String coordinates;
 
   @override
   Widget build(BuildContext context) {
@@ -143,12 +142,8 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
                         apiKey: apiKey,
                         onPlaceSelected: (placeId, latLng) async {
                           _addressController.text = placeId.description;
-                          latitude = latLng!
-                              .toMap()['result']['geometry']['location']['lat']
-                              .toString();
-                          longitude = latLng!
-                              .toMap()['result']['geometry']['location']['lng']
-                              .toString();
+                          coordinates =
+                              coordinateParser.parseCoordinates(latLng);
                         },
                         decorationBuilder: (context, child) {
                           return Material(
@@ -274,11 +269,12 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   void _displayResults() {
     if (_addressController.text.isNotEmpty && radius != null) {
       setState(() {
-        _future = loader.loadPlacesApi(
-          '$latitude,$longitude',
-          radiusMap[radius]!,
-          apiKey,
+        final dataRequest = UserSearchRequest(
+          coordinates: coordinates,
+          radius: radiusMap[radius]!,
+          apiKey: apiKey,
         );
+        _future = loader.loadGoogleMapsPlacesData(dataRequest);
         initialAddress += (_addressController.text.toString());
       });
     }

@@ -1,16 +1,13 @@
 import 'dart:convert';
-
 import 'package:fp_paulson_santamaria_munchel/uri_builder.dart';
 import 'package:http/http.dart' as http;
 
 class GoogleMapsPlacesLoader {
-  final urlBuilder = UriBuilder();
-
-  Future<String>? loadPlacesApi(
-      String coordinates, String radius, String apiKey) async {
-    final response = await http.read(Uri.parse(
-        urlBuilder.convertSearchTermToUrl(
-            coordinates: coordinates, radius: radius, apiKey: apiKey)));
+  Future<String>? loadGoogleMapsPlacesData(
+      UserSearchRequest searchRequest) async {
+    final UriBuilder uriBuilder = UriBuilder();
+    final response =
+        await http.read(Uri.parse(uriBuilder.buildUri(searchRequest)));
     return response;
   }
 
@@ -18,4 +15,16 @@ class GoogleMapsPlacesLoader {
     final jsonEncodedResponse = jsonData;
     return jsonDecode(jsonEncodedResponse);
   }
+}
+
+class UserSearchRequest {
+  final String coordinates;
+  final String radius;
+  final String apiKey;
+
+  UserSearchRequest({
+    required this.coordinates,
+    required this.radius,
+    required this.apiKey,
+  });
 }
