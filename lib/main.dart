@@ -66,6 +66,7 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   final apiKey = dotenv.env['PLACES_API_KEY'].toString();
   final PlaceDetailModelParser coordinateParser = PlaceDetailModelParser();
   late String coordinates;
+  late String selectedEditingControllerText;
 
   @override
   Widget build(BuildContext context) {
@@ -131,6 +132,10 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
                     fit: BoxFit.cover,
                   ),
                 ),
+                Text(
+                    "After entering an address, you must select a suggested address from the ones shown and a radius size to get nearby locations."
+                    "\nYou must reselect a suggested address if you change the address first selected.",
+                    textAlign: TextAlign.center),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -142,6 +147,8 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
                         apiKey: apiKey,
                         onPlaceSelected: (placeId, latLng) async {
                           _addressController.text = placeId.description;
+                          selectedEditingControllerText =
+                              _addressController.text;
                           coordinates =
                               coordinateParser.parseCoordinates(latLng);
                         },
@@ -267,7 +274,9 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
   }
 
   void _displayResults() {
-    if (_addressController.text.isNotEmpty && radius != null) {
+    if (_addressController.text.isNotEmpty &&
+        radius != null &&
+        _addressController.text == selectedEditingControllerText) {
       setState(() {
         final dataRequest = UserSearchRequest(
           coordinates: coordinates,
