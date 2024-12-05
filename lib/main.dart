@@ -5,7 +5,6 @@ import 'package:fp_paulson_santamaria_munchel/google_maps_places_loader.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:address_form/address_form.dart';
 import 'package:fp_paulson_santamaria_munchel/place_detail_model_parser.dart';
-
 import 'package:google_places_api_flutter/google_places_api_flutter.dart';
 
 void main() async {
@@ -82,34 +81,22 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
 
   Widget _buildFutureBuilder() {
     return FutureBuilder(
-      future: _future,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done &&
-            snapshot.data != null) {
-          return _buildResultsScreen(snapshot.data!);
-        } else if (snapshot.connectionState == ConnectionState.done &&
-            snapshot.data == null) {
-          return _buildNoConnectionScreen();
-        } else {
-          return const Center(child: CircularProgressIndicator());
+        future: _future,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.hasData){
+              return _buildResultsScreen(snapshot.data!);
+            } else {
+              return NoConnectionScreenWidget(backButton: _onBackButtonPressed);
+            }
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator(
+                ));
+          } else {
+            return const Center(child: Text("An Unexpected Error Occurred"));
+          }
         }
-      },
-    );
-  }
-
-  Widget _buildNoConnectionScreen() {
-    return Center(
-      child: Column(
-        children: [
-          const Text(
-              "Error, application requires an internet connection to work. Please fix your connection and try again"),
-          MaterialButton(
-            onPressed: _onBackButtonPressed,
-            color: Colors.redAccent,
-            child: const Text("Back"),
-          )
-        ],
-      ),
     );
   }
 
@@ -299,5 +286,39 @@ class _ApplicationOnStartUpState extends State<ApplicationOnStartUp> {
       initialAddress = 'Searched Address: ';
       _addressController.text = '';
     });
+  }
+}
+
+class NoConnectionScreenWidget extends StatelessWidget {
+  final VoidCallback backButton;
+  const NoConnectionScreenWidget({required this.backButton, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            "Error, application requires an internet connection to work. Please fix your connection and try again.",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: MaterialButton(
+              onPressed: backButton,
+              color: Colors.redAccent,
+              child: const Text(
+                "Back",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

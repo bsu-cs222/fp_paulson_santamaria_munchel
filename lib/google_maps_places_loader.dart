@@ -7,7 +7,7 @@ class GoogleMapsPlacesLoader {
       UserSearchRequest searchRequest) async {
     final UriBuilder uriBuilder = UriBuilder();
     final response =
-        await http.read(Uri.parse(uriBuilder.buildUri(searchRequest)));
+        await http.read(Uri.parse(uriBuilder.buildNearbySearchUri(searchRequest)));
     return response;
   }
 
