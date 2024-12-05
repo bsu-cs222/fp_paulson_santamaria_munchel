@@ -13,7 +13,7 @@ void main() {
       radius: '1609',
       apiKey: 'foo',
     );
-    String testURI = uriBuilder.buildUri(searchRequest);
+    String testURI = uriBuilder.buildNearbySearchUri(searchRequest);
     expect(testURI.toString(),
         'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.2024,-85.4073&radius=1609&key=foo');
   });
