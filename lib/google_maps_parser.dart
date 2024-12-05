@@ -11,7 +11,7 @@ class GoogleMapsParser {
 
       final GoogleMapsLocation location = GoogleMapsLocation(
           locationName: locationName,
-          vicinity: vicinity,
+          address: vicinity,
           userRatingCount: userRatingCount);
 
       listOfLocations.add(location);
@@ -23,12 +23,12 @@ class GoogleMapsParser {
 
 class GoogleMapsLocation {
   final String locationName;
-  final String vicinity;
+  final String address;
   final int userRatingCount;
 
   GoogleMapsLocation(
       {required this.locationName,
-      required this.vicinity,
+      required this.address,
       required this.userRatingCount});
 }
 

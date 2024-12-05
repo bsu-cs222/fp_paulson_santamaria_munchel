@@ -13,7 +13,7 @@ void main() {
         await _loadSampleData('test/locations_near_ball_state.json');
     final locationList = parser.parse(jsonObject);
     expect(locationList.locationList[1].locationName, 'WCRD 91.3 FM');
-    expect(locationList.locationList[1].vicinity, "Lb #200, Muncie");
+    expect(locationList.locationList[1].address, "Lb #200, Muncie");
     expect(locationList.locationList[1].userRatingCount, 2);
   });
 }
